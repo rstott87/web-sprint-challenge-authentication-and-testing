@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require('../users/users-model')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
-const { validateUser, usernameIsUnique, usernameExists } = require('../middleware/restricted');
+const { usernameExists } = require('../middleware/restricted');
 
   router.post('/register', (req, res, next) => {
     let user = req.body
